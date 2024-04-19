@@ -173,8 +173,10 @@ export default function Home() {
                   <CardHeader>
                     <div className="flex flex-wrap items-center gap-2">
                       <div
-                        className={`rounded-full bg-${
-                          ticket.status === "open" ? "blue-500" : "green-500"
+                        className={`rounded-full ${
+                          ticket.status === "open"
+                            ? "bg-blue-500"
+                            : "bg-green-500"
                         } px-3 py-1 text-xs font-medium text-white`}
                       >
                         {ticket.status.charAt(0).toUpperCase() +
