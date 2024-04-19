@@ -101,6 +101,12 @@ export default function Home() {
         },
       },
     ]);
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   };
   return (
     <div
@@ -122,6 +128,8 @@ export default function Home() {
                   <Input
                     id="name"
                     placeholder="Enter your name"
+                    type="text"
+                    value={formData.name}
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
@@ -132,6 +140,7 @@ export default function Home() {
                   <Input
                     id="email"
                     placeholder="Enter your email"
+                    value={formData.email}
                     type="email"
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -144,6 +153,8 @@ export default function Home() {
                 <Input
                   id="subject"
                   placeholder="Enter the subject"
+                  type="text"
+                  value={formData.subject}
                   onChange={(e) =>
                     setFormData({ ...formData, subject: e.target.value })
                   }
@@ -155,6 +166,7 @@ export default function Home() {
                   className="min-h-[150px]"
                   id="message"
                   placeholder="Enter your message"
+                  value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
